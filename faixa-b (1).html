@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faixa B</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: 'Trebuchet MS', Verdana, sans-serif;
+    background: #fff2f6; color: #4a1230; padding: 40px 16px;
+  }
+  header { text-align: center; margin-bottom: 40px; }
+  header h1 { font-size: 2.3rem; margin: 0; color: #d6336c; }
+  header p { color: #a44b6f; margin-top: 8px; }
+  main { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+  .post {
+    background: #ffffff; border: 1px solid #f5c2d8; border-radius: 18px;
+    padding: 24px; box-shadow: 0 6px 16px rgba(214, 51, 108, 0.1);
+  }
+  .post h2 { margin-top: 0; color: #d6336c; }
+  .post p { line-height: 1.6; color: #5c2440; }
+  .tag {
+    display: inline-block; background: #f783ac; color: #fff;
+    font-size: 0.75rem; font-weight: bold; padding: 4px 10px;
+    border-radius: 999px; margin-bottom: 12px;
+  }
+  .reacoes { display: flex; gap: 12px; margin-top: 16px; }
+  button {
+    display: flex; align-items: center; gap: 8px;
+    background: #fbe0ea; color: #4a1230; border: 1px solid #f5c2d8;
+    border-radius: 10px; padding: 8px 14px; font-size: 1rem; cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  button:hover { background: #f5c2d8; transform: translateY(-2px); }
+  button:active { transform: scale(0.95); }
+  button span { font-weight: bold; color: #d6336c; }
+  footer { text-align: center; margin-top: 48px; color: #a44b6f; font-size: 0.85rem; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>🎧 Faixa B</h1>
+    <p>Playlists, discos e aquela música que ninguém mais lembra</p>
+  </header>
+  <main>
+    <article class="post">
+      <span class="tag">PLAYLIST</span>
+      <h2>Trilha sonora para focar em qualquer tarefa</h2>
+      <p>Uma seleção instrumental sem letras para não competir com sua concentração, perfeita para estudar ou trabalhar.</p>
+      <div class="reacoes">
+        <button>🎵<span>0</span></button>
+        <button>🔥<span>0</span></button>
+        <button>🎤<span>0</span></button>
+      </div>
+    </article>
+    <article class="post">
+      <span class="tag">DISCO</span>
+      <h2>Álbuns que ficam ainda melhores ouvidos do início ao fim</h2>
+      <p>Numa era de playlists e faixas soltas, alguns discos ainda merecem ser ouvidos na ordem, como uma história completa.</p>
+      <div class="reacoes">
+        <button>🎵<span>0</span></button>
+        <button>🔥<span>0</span></button>
+        <button>🎤<span>0</span></button>
+      </div>
+    </article>
+    <article class="post">
+      <span class="tag">CURIOSIDADE</span>
+      <h2>O que é uma "faixa B" e por que ela importa</h2>
+      <p>Nos vinis antigos, o lado B guardava faixas menos óbvias — e às vezes as melhores. Entenda a origem desse termo e seu significado hoje.</p>
+      <div class="reacoes">
+        <button>🎵<span>0</span></button>
+        <button>🔥<span>0</span></button>
+        <button>🎤<span>0</span></button>
+      </div>
+    </article>
+  </main>
+  <footer>Feito para quem tem uma playlist pra cada humor.</footer>
+<script>
+  const botoes = document.querySelectorAll("button");
+  botoes.forEach(function (botao) {
+    botao.addEventListener("click", botaoClicado);
+    function botaoClicado() {
+      let contador = botao.querySelector("span");
+      contador.textContent++;
+    }
+  });
+</script>
+</body>
+</html>
